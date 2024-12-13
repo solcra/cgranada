@@ -1,7 +1,20 @@
 ---
+import Hero from '../components/Hero.astro'
 import BaseLayout from '../layouts/BaseLayout.astro'
 //JS
 ---
-<BaseLayout title="About | Jeanine White" description="About Jeanine White Lorem Ipsum">
-    <h1>Hola este es el blog de carlos</h1>
+<BaseLayout title="Blog | Carlos Granada" description="Este es mi blog de aprendizaje">
+	<div class="stack gap-20">
+		<main class="wrapper about">
+			<Hero
+				title="About"
+				tagline="Thanks for stopping by. Read below to learn more about myself and my background."
+			>
+				<img
+					width="1553"
+					height="873"
+					src="/assets/at-work.jpg"
+					alt="Jeanine White at work with a colleague"
+				/>
+			</Hero>
 </BaseLayout>
