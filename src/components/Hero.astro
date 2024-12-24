@@ -1,4 +1,5 @@
 ---
+import Header from './Header.astro';
 interface Props {
 	title: string;
 	tagline?: string;
@@ -10,7 +11,7 @@ const { align = 'center', tagline, title } = Astro.props;
 
 <div class:list={['hero stack gap-4', align]}>
 	<div class="stack gap-2">
-		<h1 class="title">{title}</h1>
+		<Header title={title}></Header>
 		{tagline && <p class="tagline">{tagline}</p>}
 	</div>
 	<slot />
@@ -28,10 +29,7 @@ const { align = 'center', tagline, title } = Astro.props;
 		margin-inline: auto;
 	}
 
-	.title {
-		font-size: var(--text-3xl);
-		color: var(--gray-0);
-	}
+	
 
 	@media (min-width: 50em) {
 		.hero {
@@ -45,10 +43,6 @@ const { align = 'center', tagline, title } = Astro.props;
 		.start .title,
 		.start .tagline {
 			margin-inline: unset;
-		}
-
-		.title {
-			font-size: var(--text-5xl);
 		}
 	}
 </style>
