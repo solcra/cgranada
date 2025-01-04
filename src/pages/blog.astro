@@ -1,6 +1,9 @@
 ---
-import Hero from '../components/Hero.astro'
-import BaseLayout from '../layouts/BaseLayout.astro'
+import Hero from '../components/Hero.astro';
+import BaseLayout from '../layouts/BaseLayout.astro';
+import Cart from '../components/Cart.astro';
+
+const allPosts = await Astro.glob('../content/blog/*.md')
 //JS
 ---
 <BaseLayout title="Blog | Carlos Granada" description="Este es mi blog de aprendizaje">
@@ -55,5 +58,14 @@ import BaseLayout from '../layouts/BaseLayout.astro'
 				</section>
 			</main>
 		</header>
+		{
+			allPosts.map((item)=>(
+				<Cart 
+					title={item?.frontmatter?.title} 
+					time={item?.frontmatter?.pubDate} 
+					href="hola" 
+					tags={item?.frontmatter?.tags} />
+			))
+		}
 	</div>
 </BaseLayout>
