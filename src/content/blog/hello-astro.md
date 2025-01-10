@@ -1,8 +1,8 @@
 ---
 title: "Hello astro"
-pubDate: 2025-05-07
+pubDate: 2025-05-07 00:00:00
 descreiption: "Hello this is my first recommendation"
-image:
+image: "/assets/stock-2.jpg"
 tags: ["astro","javascript"]
 ---
 

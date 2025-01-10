@@ -1,0 +1,21 @@
+---
+import Cart from '../../components/Cart.astro';
+import { getCollection } from 'astro:content';
+
+const blogs = (await getCollection("blog")).sort(
+    (a,b)=> a.data.pubDate.valueOf() - b.data.pubDate.valueOf()
+);
+console.log(await getCollection("blog"));
+---
+<h1>CArlos</h1>
+
+{
+    blogs.map((blog)=>(
+        <Cart 
+            title={blog.data.title} 
+            time={blog.data.pubDate} 
+            href="hola" 
+            tags={blog.data.tags}
+            slug={blog.id} />
+    ))
+}
