@@ -1,5 +1,6 @@
 ---
 title: "Hello world"
+slug: "hello-world"
 pubDate: 2025-05-07 00:00:00
 descreiption: "Hello this is my first recommendation"
 image: "/assets/stock-2.jpg"
