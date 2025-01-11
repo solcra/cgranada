@@ -22,7 +22,7 @@ export const collections = {
 			pubDate: z.coerce.date(), // Asegúrate de que coincida con los datos de blog
 			tags: z.array(z.string()),
 			slug: z.string(), 
-			img: z.string().optional(),
+			image: z.string().optional(),
 			img_alt: z.string().optional(),
 		}),
 	}),
