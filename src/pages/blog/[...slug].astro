@@ -3,6 +3,7 @@ import { type CollectionEntry, getCollection } from 'astro:content';
 import Blogs from '../../layouts/Blogs.astro';
 
 import { render } from 'astro:content';
+import Header from '../../components/Header';
 
 interface Props {
 	entry: CollectionEntry<'blog'>;
@@ -22,6 +23,8 @@ export async function getStaticPaths() {
 const { entry } = Astro.props;
 const { Content } = await render(entry);
 ---
+<Header title="Carlosw" />
 <Blogs title={entry.data.title} image={entry.data.image} tags={entry.data.tags}>
+	
 	<Content />
 </Blogs>
