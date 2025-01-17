@@ -1,5 +1,5 @@
 module.exports = {
-    content: ['./src/**/*/*.{astro,html,js,jsx,md,mdx,tsx}'],
+    content: ['./src/**/*/*.{astro,html,js,jsx,md,mdx,tsx,vue}'],
     theme: {
         extend: {
           animation: {
