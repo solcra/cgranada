@@ -4,6 +4,7 @@ import Blogs from '../../layouts/Blogs.astro';
 
 import { render } from 'astro:content';
 import Header from '../../components/Header';
+import Footer from '../../components/Footer.vue';
 
 interface Props {
 	entry: CollectionEntry<'blog'>;
@@ -28,3 +29,4 @@ const { Content } = await render(entry);
 	
 	<Content />
 </Blogs>
+<Footer />
