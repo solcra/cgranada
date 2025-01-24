@@ -5,6 +5,7 @@ import Blogs from '../../layouts/Blogs.astro';
 import { render } from 'astro:content';
 import Header from '../../components/Header';
 import Footer from '../../components/Footer.vue';
+import Social from '../../components/Social.svelte';
 
 interface Props {
 	entry: CollectionEntry<'blog'>;
@@ -29,4 +30,5 @@ const { Content } = await render(entry);
 	
 	<Content />
 </Blogs>
+<Social />
 <Footer />
